@@ -1,0 +1,71 @@
+<ion-menu side="right"  [swipeEnabled]="false" [content]="content">
+  <ion-header>
+    <ion-toolbar class="user-profile">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+              <div class="user-avatar">
+                <ion-avatar style="width: 100%;height: 100%" item-start  class="user-avatar">
+                  <ion-text-avatar>{{userinfo.firstletter}}</ion-text-avatar>
+                </ion-avatar>
+              </div>
+          </ion-col>
+          <ion-col padding-top col-8>
+            <h2  style="color: black"  ion-text class="no-margin bold text-white">
+                {{userinfo.user}}
+            </h2>
+           
+          </ion-col>
+        </ion-row>
+
+       
+
+      </ion-grid>
+
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <ion-content color="primary">
+
+    
+  <ion-content>
+          <ion-list>
+            
+              
+            <button *ngIf="userinfo.loggedin && userinfo.isAdmin == 'no' " ion-item menuClose  (click)="createOrder()">
+                         
+              انشاء طلب جديد
+             </button>
+             <button *ngIf="userinfo.loggedin && userinfo.isAdmin =='yes' " ion-item menuClose  (click)="viewNewOrders()">
+                         
+              الطلبات الجديدة
+             </button> 
+             <button *ngIf="userinfo.loggedin && userinfo.isAdmin =='yes' " ion-item menuClose  (click)="ViewAdminsList()">
+                         
+                المشرفين
+               </button>
+                   <button *ngIf="userinfo.loggedin && userinfo.isAdmin=='no'" ion-item menuClose  (click)="myorders()">
+                         
+                  طلباتي
+                 </button>
+                 <button ion-item menuClose  (click)="calc()" >
+                         
+                   حساب الأقساط
+               </button>
+
+               <button *ngIf="userinfo.loggedin" ion-item menuClose  (click)="logout()">
+                         
+               تسجيل الخروج
+            </button>
+          </ion-list>
+        </ion-content>
+
+      
+  </ion-content>
+
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content  swipeBackEnabled="false"></ion-nav>

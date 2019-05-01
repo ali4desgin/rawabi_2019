@@ -1,0 +1,219 @@
+<!--
+  Generated template for the CreatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>العروض</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <div padding  id="cloud-layer">
+  
+      <ion-row>
+        <ion-col>
+        
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+          <ion-list inset >
+  
+              <ion-grid>
+
+                  <ion-row>
+                      <ion-col  col-11>
+                          <ion-item>
+                              <ion-label>الأسم</ion-label>
+                              <ion-input  [(ngModel)]="userPostData.name" type="text" disabled>
+                
+                              
+                      
+                              </ion-input>
+                                
+                            </ion-item>
+                      </ion-col>
+                      <ion-col  col-1>
+                          <span  style="color: red" > *</span>
+                      </ion-col>
+                    </ion-row>
+
+                  <ion-row>
+                    <ion-col  col-11>
+                        <ion-item>
+                            <ion-label>أدخل مدينتك هنا</ion-label>
+                            <ion-input  [(ngModel)]="userPostData.country" type="text">
+              
+                            
+                    
+                            </ion-input>
+                              
+                          </ion-item>
+                    </ion-col>
+                    <ion-col  col-1>
+                        <span  style="color: red" > *</span>
+                    </ion-col>
+                  </ion-row>
+                 
+
+                  <ion-row>
+                      <ion-col  col-11>
+                          <ion-item>
+                            <ion-label>نوع التقسيط</ion-label>
+                              <ion-input disabled="true" [(ngModel)]="userPostData.service_type"type="text"></ion-input>
+                            </ion-item>
+                      </ion-col>
+                      <ion-col  col-1>
+                          <span  style="color: red" > *</span>
+                      </ion-col>
+                    </ion-row>
+
+
+                    <ion-row>
+                        <ion-col  col-11>
+                            <ion-item>
+                                <ion-label>أدخل السجل المدني</ion-label>
+                                <ion-input  [(ngModel)]="userPostData.record" type="tel"></ion-input>
+                              </ion-item>
+                        </ion-col>
+                        <ion-col  col-1>
+                            <span  style="color: red" > *</span>
+                        </ion-col>
+                      </ion-row>
+
+
+                      <ion-row>
+                          <ion-col  col-11>
+                              <ion-item>
+                                  <ion-label>رقم الهاتف</ion-label>
+                                  <ion-input [(ngModel)]="userPostData.mobile" type="tel"></ion-input>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col  col-1>
+                              <span  style="color: red" > *</span>
+                          </ion-col>
+                        </ion-row>
+
+                        <ion-row>
+                            <ion-col  col-11>
+                                <ion-item>
+                                    <ion-label>أدخل وظيفتك هنا</ion-label>
+                                    <ion-input [(ngModel)]="userPostData.job" type="text"></ion-input>
+                                  </ion-item>
+                            </ion-col>
+                            <ion-col  col-1>
+                                <span  style="color: red" > *</span>
+                            </ion-col>
+                          </ion-row>
+
+                          <ion-row>
+                              <ion-col  col-11>
+                                  <ion-item>
+                                      <ion-label>أدخل مكان خدمتك</ion-label>
+                                      <ion-input [(ngModel)]="userPostData.jobLoc" type="text"></ion-input>
+                                    </ion-item>
+                              </ion-col>
+                              <ion-col  col-1>
+                                  <span  style="color: red" > *</span>
+                              </ion-col>
+                            </ion-row>
+
+                            <ion-row>
+                                <ion-col  col-11>
+                                    <ion-item>
+                                        <ion-label>ادخل مدة خدمتك</ion-label>
+                                        <ion-input [(ngModel)]="userPostData.jobDes" type="text"></ion-input>
+                                      </ion-item>
+                
+                                </ion-col>
+                                <ion-col  col-1>
+                                    <span  style="color: red" > *</span>
+                                </ion-col>
+                              </ion-row>
+
+                              <ion-row>
+                                  <ion-col  col-11>
+                                      <ion-item>
+                                          <ion-label>أدخل مقدار راتبك </ion-label>
+                                          <ion-input  [(ngModel)]="userPostData.sallary" type="number"></ion-input>
+                                        </ion-item>
+                                  </ion-col>
+                                  <ion-col  col-1>
+                                      <span  style="color: red" > *</span>
+                                  </ion-col>
+                                </ion-row>
+
+                                <ion-row>
+                                    <ion-col  col-11>
+                                        
+                        <ion-item>
+                            <ion-label>البنك</ion-label>
+                            <ion-input [(ngModel)]="userPostData.bank" type="text"></ion-input>
+                          </ion-item>
+                                    </ion-col>
+                                    <ion-col  col-1>
+                                        <span  style="color: red" > *</span>
+                                    </ion-col>
+                                  </ion-row>
+
+                                  <ion-row>
+                                      <ion-col  col-11>
+                                          <ion-item>
+                                              <ion-label>أدخل مقدار أستقطاعاتك هنا</ion-label>
+                                              <ion-input  [(ngModel)]="userPostData.profit" type="number"></ion-input>
+                                            </ion-item>
+                                      </ion-col>
+                                      <ion-col  col-1>
+                                          <span  style="color: red" > *</span>
+                                      </ion-col>
+                                    </ion-row>
+
+                                    <ion-row>
+                                        <ion-col  col-11>
+                                            <ion-item>
+                                                <ion-label>أختر المعرف</ion-label>
+                                                <ion-select [(ngModel)]="userPostData.writing"  >
+                                                    <ion-option *ngFor="let number of numbers">{{number}}</ion-option>
+                                                   
+                                               </ion-select>
+                                              </ion-item>
+                                        </ion-col>
+                                        <ion-col  col-1>
+                                            <span  style="color: red" > *</span>
+                                        </ion-col>
+                                      </ion-row>
+                </ion-grid>
+           
+          
+        
+
+                          
+
+                          
+                         
+                            <button (click)=" submitorder()" ion-button class="login-button" >أنشاء الطلب</button>
+                              
+      
+                                
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+         
+        </ion-col>
+      </ion-row>
+  
+    </div>
+  
+  </ion-content>

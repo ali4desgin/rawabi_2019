@@ -1,0 +1,88 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>{{phone}}</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content >
+  
+
+    <img  *ngIf="isimage"      [src]="base64Image"  />
+    <div class="message-wrap" *ngFor="let item of messages; let msgIndex = index" >
+  
+      <div 
+           class="message">
+
+           
+           
+          
+        <div class="msg-detail" >
+          <div class="msg-info" style="text-align: center">
+            <p [style.color]="currrentTheme.chat_created_at_color">
+                {{item.created_at}}</p>
+          </div>
+
+          <img  *ngIf=" item.is_image == 'yes' && item.isAdmin =='yes' "      src="https://hatoon.net/rawabi/app/public/chats/images/{{item.image}}"  class="thumbnail" style="float: left;"/>
+           <img  *ngIf=" item.is_image == 'yes' && item.isAdmin =='no' "      src="https://hatoon.net/rawabi/app/public/chats/images/{{item.image}}"  class="thumbnail" style="float: right;" />
+
+
+
+
+          <div class="msg-content" *ngIf=" item.isAdmin == 'yes' &&  item.is_image == 'no'" [style.background-color]="currrentTheme.chat_other_message_backgroundColor" style="float: left;">
+            <!-- <span class="triangle" style="background-color: #488aff;color: white"></span> -->
+            <p [style.color]="currrentTheme.chat_other_message_color" class="line-breaker ">{{item.message}}</p>
+
+            
+          </div>
+
+          <div class="msg-content" *ngIf=" item.isAdmin == 'no'  &&  item.is_image == 'no'" style=" float: right;" [style.background-color]="currrentTheme.chat_my_message_backgroundColor">
+              <!-- <span class="triangle"></span> -->
+              <p  class="line-breaker " [style.color]="currrentTheme.chat_my_message_color" class="line-breaker ">{{item.message}}</p>
+  
+              
+            </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    
+ 
+  </ion-content>
+  
+  <ion-footer no-border   [style.height]="'55px'">
+    <div class="input-wrap">
+
+        <button *ngIf="!haswhatsapp" ion-button clear icon-only item-right (click)="redirectOrder(items)" >
+            <ion-icon   name="return-right"></ion-icon>
+        </button>
+
+
+      <button *ngIf="haswhatsapp" ion-button clear icon-only item-right (click)="openwhats()" >
+        <ion-icon   name="logo-whatsapp" [style.color]="currrentTheme.chat_whatsapp_btn_color"></ion-icon>
+       
+      </button>
+      <button ion-button clear icon-only item-right (click)="opengallery()" >
+        <ion-icon name="document" [style.color]="currrentTheme.chat_send_image_btn_color"></ion-icon>
+       
+      </button>
+      <textarea [style.color]="currrentTheme.chat_message_text_field_color" [style.background-color]="currrentTheme.chat_message_text_field_background_color" #chat_input
+                placeholder="أكتب رسالة"
+                [(ngModel)]="editorMsg"
+               >
+      </textarea>
+      <button ion-button clear icon-only item-right (click)="sendMsg()">
+        <ion-icon name="ios-send" ios="ios-send" md="md-send" [style.color]="currrentTheme.chat_send_btn_message_color"></ion-icon>
+      </button>
+      <!-- <button ion-button clear icon-only item-right>
+        <ion-icon name="color-palette" [style.color]="currrentTheme.chat_change_colors_btn"></ion-icon>
+      </button> -->
+    </div>
+
+  </ion-footer>
+
+
+
+  

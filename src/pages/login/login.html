@@ -1,0 +1,96 @@
+<!--
+  Generated template for the CreatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  
+  
+  </ion-header>
+  
+  
+  <ion-content>
+  
+      <div padding  id="cloud-layer">
+    
+          <ion-row style="margin-top:40px">
+              <ion-col>
+                  <img class="logo" src="assets/imgs/logo.png" /> 
+              </ion-col>
+            </ion-row>
+        
+    
+        <ion-row>
+          <ion-col>
+            <ion-list inset >
+    
+              <ion-item>
+                <ion-label>رقم الهاتف</ion-label>
+                <ion-input  [(ngModel)]="userData.phone" type="tel"></ion-input>
+              </ion-item>
+    
+              <ion-item>
+                <ion-label>كلمة السر</ion-label>
+                <ion-input  [(ngModel)]="userData.password"type="password"></ion-input>
+              </ion-item>
+  
+             
+                            
+                              <button (click)=" login()" ion-button class="reg-button" >دخول</button>
+                                
+        
+                              <button (click)=" openreg()" ion-button class="login-button" >تسجيل جديد</button>
+
+
+                              <button (click)=" openforget()"  class="forget-button" >هل نسيت كلمة السر ؟</button>
+                                  
+  
+            </ion-list>
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col>
+           
+          </ion-col>
+        </ion-row>
+    
+      </div>
+
+   
+      
+    
+      <ion-scroll scrollX="true"  direction="x" style="height:160px;white-space: nowrap;">
+        <ion-card class="scroll-item" *ngFor="let new of news">
+          <ion-card-content>
+            <h3>{{ new.title }} </h3>
+
+          
+            <pre wrap style="pading:10px; margin: 10px" [innerHTML]="  new.message "></pre>
+          </ion-card-content>
+        </ion-card>
+        
+      </ion-scroll>
+
+
+
+    <style>
+      .container {
+        max-width: 500px;
+        margin:auto auto ;
+        color: #006c9e ;
+      }
+      .scroll-item {
+        display: inline-block;
+        height: 120px !important; 
+        position: relative; 
+        border-radius: 8px;
+        white-space: normal;
+        color: #006c9e ;
+        font-size: 14px;
+      }
+    </style>
+    </ion-content>
+  

@@ -1,0 +1,81 @@
+.ios, .md {
+
+    page-offers {
+  
+      .content {
+        background-color: #DDF6F8;
+       
+      
+      }
+  
+      img {
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+
+     
+  
+        ion-row {
+          align-items: center;
+          text-align: center;
+        }
+  
+        ion-item {
+            border-radius: 30px !important;
+            padding-left: 10px !important;
+            margin-bottom: 10px;
+            background-color: #FFF;
+            opacity: 1;
+            direction: rtl;
+            font-size: 0.9em;
+        }
+  
+        ion-list {
+            margin: 0;
+        }
+  
+
+        .scroll-zoom-wrapper {
+            white-space: nowrap;
+        }
+    
+        ion-card {
+
+            padding: 10px;
+             overflow: hidden;
+            display: inline-block;
+        }
+    
+        ion-scroll {
+            min-height: 160px; 
+            height: auto;
+    
+                .scroll-content {
+                padding: 0px !important;
+            }    
+        }
+
+        .login-button {
+            width: 100%;
+            border-radius: 30px;
+            font-size: 0.9em;
+            border: 1px solid #fff;
+            background-color: #39acdc;
+        }
+  
+      
+       
+
+        .sawa-button {
+            width: 100%;
+            border-radius: 30px;
+            font-size: 0.9em;
+            color: #39acdc;
+            border: 1px solid #39acdc;
+            background-color: #fff;
+        }
+    }
+  
+  }

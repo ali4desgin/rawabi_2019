@@ -1,0 +1,97 @@
+<!--
+  Generated template for the ContactUsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<style>
+  @font-face {
+    font-family: sysfont ;
+    src : url("assets/fonts/droidkufi-regular.ttf");
+  }
+  ion-content {
+    font-family: sysfont ;
+  }
+</style> 
+
+
+<ion-header>
+
+  <ion-navbar>
+
+      <button ion-button menuToggle>
+          <ion-icon color="primary" name="menu"></ion-icon>
+        </button>
+    <ion-title>تواصل معنا</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  
+      
+        
+    
+
+
+  <br>
+  <h3>
+    لا تتردد في التواصل معنا في روابي هجر
+  </h3>
+
+
+  <p>
+    <ion-icon name=""></ion-icon> 
+    <ion-list>
+      <ion-item>
+        جوال
+        <a href="tel:  {{ info.phone1 }}" ion-button outline color="dark" item-end icon-start>
+          <ion-icon name="call"></ion-icon>
+          &nbsp;&nbsp;
+          {{ info.phone1 }}
+        </a>
+      </ion-item>
+      <ion-item>
+        جوال
+        <a href="tel:  {{ info.phone2 }}" ion-button outline color="dark" item-end icon-start>
+          <ion-icon name="call"></ion-icon>
+          &nbsp;&nbsp;
+          {{ info.phone2 }}
+        </a>
+      </ion-item>
+      <ion-item>
+        جوال
+        <a href="tel: {{ info.phone3 }}" ion-button outline color="dark" item-end icon-start>
+          <ion-icon name="call"></ion-icon>
+          &nbsp;&nbsp;
+          {{ info.phone3 }}
+        </a>
+      </ion-item>
+      <ion-item>
+          واتساب
+        <a href="https://api.whatsapp.com/send?phone={{ info.whatsapp }}" ion-button outline color="secondary" item-end icon-start>
+          <ion-icon name="logo-whatsapp"></ion-icon>
+          &nbsp;&nbsp;
+          {{ info.whatsapp }}
+        </a>
+      </ion-item>
+      <ion-item>
+          بريد الكتروني
+        <a href="mailTo:{{ info.mail }}" ion-button outline color="primary" item-end icon-start>
+          <ion-icon name="mail"></ion-icon>
+          &nbsp;
+          {{ info.mail }}
+        </a>
+      </ion-item>
+    </ion-list>
+  </p>
+  <!-- <br>
+  <h3> اترك رسالة </h3>
+   -->
+
+
+</ion-content>

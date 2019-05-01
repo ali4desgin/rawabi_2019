@@ -1,0 +1,7 @@
+{
+  "name": "rawabi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
